@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=IceSound Configurator
+Comment=Small utility for configuration IceSound
+Comment[pl]=Ma³e narzêie konfiguruj±ce IceSound
+Icon=icesndcfg.xpm
+Exec=icesndcfg
+Terminal=0
+Type=Application
+# vi: encoding=utf-8
