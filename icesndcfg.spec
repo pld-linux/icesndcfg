@@ -32,7 +32,7 @@ Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
 
 %build
 rm -f missing
-gettextize --copy --force
+%{__gettextize}
 aclocal
 %{__autoconf}
 %{__automake}
