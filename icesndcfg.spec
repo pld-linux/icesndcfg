@@ -20,11 +20,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is a small utility for configuration IceSound. It allows you to
-set any wav-file for IceWM guievnts very easy.
+set any .WAV file for IceWM guievnts very easy.
 
 %description -l pl
 Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
-³atwe ustawienie dowolnych plików .wav dla zdarzeñ IceWM-a.
+³atwe ustawienie dowolnych plików .WAV dla zdarzeñ IceWM-a.
 
 %prep
 %setup -q
