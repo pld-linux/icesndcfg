@@ -1,0 +1,22 @@
+--- icesndcfg-0.8/configure.in.orig	2004-03-30 01:17:00.000000000 +0200
++++ icesndcfg-0.8/configure.in	2004-03-30 01:22:34.761045560 +0200
+@@ -52,13 +52,13 @@
+ [  --enable-esd            use this options for esd support],
+ [ if test "$enable_esd" != "no"; then
+ 	AC_CHECK_LIB(esd, main,
+-		AC_CHECK_HEADER(esd.h, 
+-	       AC_CHECK_HEADER(audiofile.h, 
+-	             AC_DEFINE(ESD, 1, [Define to enable ESound support.])
++		[AC_CHECK_HEADER(esd.h, 
++	       [AC_CHECK_HEADER(audiofile.h, 
++	             [AC_DEFINE(ESD, 1, [Define to enable ESound support.])
+ 				 LIBS="$LIBS -lesd"
+-		   ) dnl end of checking audiofile.h
+-	    ) dnl end of checking esd.h
+-	) dnl end of checking libesd
++		   ]) dnl end of checking audiofile.h
++	    ]) dnl end of checking esd.h
++	]) dnl end of checking libesd
+   fi
+ ]) dnl end of --enable-esd
+ 
