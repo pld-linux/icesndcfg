@@ -1,5 +1,5 @@
 Summary:	IceSound Configurator
-Summary(pl):	Konfigurator IceSound'a
+Summary(pl):	Konfigurator IceSounda
 Name:		icesndcfg
 Version:	0.8
 Release:	1
@@ -10,8 +10,8 @@ Source1:	%{name}.desktop
 URL:		http://www.selena.kherson.ua/xvadim/programse.html#icesndcfg
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
 BuildRequires:	esound-devel
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,7 +25,7 @@ set any wav-file for IceWM guievnts very easy.
 
 %description -l pl
 Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
-³atwe ustawienie dowolnych plików .wav dla zdarzeñ IceWM'a.
+³atwe ustawienie dowolnych plików .wav dla zdarzeñ IceWM-a.
 
 %prep
 %setup -q
