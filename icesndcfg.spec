@@ -51,8 +51,6 @@ ln -sf ../icesndcfg/pixmaps/icon-ice.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/icesndcfg
 ln -sf ../icesndcfg/pixmaps $RPM_BUILD_ROOT%{_pixmapsdir}/icesndcfg
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM/
 
-gzip -9nf AUTHORS ChangeLog README TODO
-
 #%find_lang %{name}
 
 %clean
@@ -60,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/icesndcfg
 %{_pixmapsdir}/*
