@@ -16,8 +16,6 @@ BuildRequires:	gtk+-devel >= 1.2.0
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 This is a small utility for configuration IceSound. It allows you to
