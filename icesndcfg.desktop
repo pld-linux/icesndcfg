@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=IceSound Configurator
 Comment=Small utility for configuration IceSound
-Comment[pl]=Ma³e narzêie konfiguruj±ce IceSound
+Comment[pl]=Małe narzędzie konfigurujące IceSound
 Icon=icesndcfg.xpm
 Exec=icesndcfg
 Terminal=0
