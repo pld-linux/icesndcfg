@@ -33,7 +33,7 @@ Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
 %build
 rm -f missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
