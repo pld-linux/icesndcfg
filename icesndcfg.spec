@@ -2,12 +2,13 @@ Summary:	IceSound Configurator
 Summary(pl):	Konfigurator IceSounda
 Name:		icesndcfg
 Version:	0.8
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Window Managers/Tools
 Source0:	http://www.selena.kherson.ua/xvadim/%{name}-%{version}.tar.bz2
 # Source0-md5:	e636114a659b80bce22ae83d480a9a66
 Source1:	%{name}.desktop
+Patch0:		%{name}-ac.patch
 URL:		http://www.selena.kherson.ua/xvadim/programse.html#icesndcfg
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -16,7 +17,6 @@ BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 This is a small utility for configuration IceSound. It allows you to
@@ -28,9 +28,9 @@ Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-rm -f missing
 %{__gettextize}
 %{__aclocal}
 %{__autoconf}
@@ -41,14 +41,14 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Settings/IceWM/,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 ln -sf ../icesndcfg/pixmaps/icon-ice.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/icesndcfg.xpm
 ln -sf ../icesndcfg/pixmaps $RPM_BUILD_ROOT%{_pixmapsdir}/icesndcfg
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM/
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 #%find_lang %{name}
 
@@ -61,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/icesndcfg
 %{_pixmapsdir}/*
-%{_applnkdir}/Settings/IceWM/*
+%{_desktopdir}/*.desktop
