@@ -7,7 +7,7 @@ License:	GPL v2
 Group:		X11/Window Managers/Tools
 Source0:	http://www.selena.kherson.ua/xvadim/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
-URL:		http://www.selena.kherson.ua/xvadim/programise.html#icesndcfg
+URL:		http://www.selena.kherson.ua/xvadim/programse.html#icesndcfg
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
