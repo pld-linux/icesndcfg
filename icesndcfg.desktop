@@ -7,4 +7,5 @@ Exec=icesndcfg
 Terminal=false
 Type=Application
 Encoding=UTF-8
+Categories=Utility;Settings;
 # vi: encoding=utf-8
