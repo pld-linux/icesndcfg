@@ -8,10 +8,12 @@ Group:		X11/Window Managers/Tools
 Source0:	http://www.selena.kherson.ua/xvadim/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 URL:		http://www.selena.kherson.ua/xvadim/programise.html#icesndcfg
-BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	esound-devel
+BuildRequires:	gtk+-devel >= 1.2.0
 Requires:	icewm
-Requires:	gtk+ >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -29,20 +31,29 @@ Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
 %setup -q
 
 %build
-%configure2_13 --enable-esd
+rm -f missing
+gettextize --copy --force
+aclocal
+autoconf
+automake -a -c -f
+%configure \
+	--enable-esd
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_applnkdir}/Settings/IceWM/,%{_pixmapsdir}}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 ln -sf ../icesndcfg/pixmaps/icon-ice.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/icesndcfg.xpm
 ln -sf ../icesndcfg/pixmaps $RPM_BUILD_ROOT%{_pixmapsdir}/icesndcfg
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM/
 
 gzip -9nf AUTHORS ChangeLog README TODO
+
+#%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,6 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/icesndcfg/
+%{_datadir}/icesndcfg
 %{_pixmapsdir}/*
 %{_applnkdir}/Settings/IceWM/*
