@@ -34,8 +34,8 @@ Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
 rm -f missing
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-esd
 %{__make}
