@@ -1,5 +1,5 @@
 Summary:	IceSound Configurator
-Summary(pl):	Konfigurator IceSounda
+Summary(pl.UTF-8):   Konfigurator IceSounda
 Name:		icesndcfg
 Version:	0.8
 Release:	3
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a small utility for configuration IceSound. It allows you to
 set any .WAV file for IceWM guievnts very easy.
 
-%description -l pl
-Jest to ma³e narzêdzie konfiguruj±ce IceSound. Pozwala ono na bardzo
-³atwe ustawienie dowolnych plików .WAV dla zdarzeñ IceWM-a.
+%description -l pl.UTF-8
+Jest to maÅ‚e narzÄ™dzie konfigurujÄ…ce IceSound. Pozwala ono na bardzo
+Å‚atwe ustawienie dowolnych plikÃ³w .WAV dla zdarzeÅ„ IceWM-a.
 
 %prep
 %setup -q
