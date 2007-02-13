@@ -1,5 +1,5 @@
 Summary:	IceSound Configurator
-Summary(pl.UTF-8):   Konfigurator IceSounda
+Summary(pl.UTF-8):	Konfigurator IceSounda
 Name:		icesndcfg
 Version:	0.8
 Release:	3
