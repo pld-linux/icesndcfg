@@ -2,10 +2,9 @@
 Name=IceSound Configurator
 Comment=Small utility for configuration IceSound
 Comment[pl]=Małe narzędzie konfigurujące IceSound
-Icon=icesndcfg.xpm
+Icon=icesndcfg
 Exec=icesndcfg
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Settings;DesktopSettings;
 # vi: encoding=utf-8
