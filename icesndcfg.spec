@@ -13,7 +13,7 @@ URL:		http://www.selena.kherson.ua/xvadim/programse.html#icesndcfg
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	esound-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+-devel >= 1.2.0
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
